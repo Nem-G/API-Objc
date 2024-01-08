@@ -43,7 +43,7 @@ Edit Tại Trong [`IGGMain.mm`](IGGMain.mm)
 - 99: tỉ lệ thắng bạn mong muốn
 - 1000: số trận hiện taị của bạn
 ```obj-c
-      NSString *result = [nemg normaliseGradeWithWinNow:@"90" winNeed:@"99" n:@"1000"];
+      NSString *result = [nemg rateaov:@"90" winNeed:@"99" n:@"1000"];
        NSLog(@"%@", result);
 ```
 - Check xem VPN có hoạt động hay không
