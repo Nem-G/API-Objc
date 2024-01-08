@@ -1,0 +1,10 @@
+Package: com.nemg.vn
+Name: AOV Share
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Project By NemG
+Maintainer: NemG
+Author: NemG
+Section: Liên Quân
+Version: 0.1.0
+
