@@ -1,6 +1,6 @@
 # API-Objc
 API Support IOS Jailbreak or No Jailbreak 
-Có Các Chức Năng API Đi Kèm
+Có Các Chức Năng API Đi Kèm Theo Menu 3 Ngón
 <div style="text-align: center;">
 <b>Template Preview</b><br>
 
@@ -31,7 +31,7 @@ Edit Tại Trong [`IGGMain.mm`](IGGMain.mm)
      NSLog(@"%@", result); // hoặc set text cho label, hiển thị alert, tùy thuộc vào nhu cầu của bạn
  }];
 ```
-- Share Ảo của Facebook/ Token Setup ở [Đây](API/nemg.h)
+- Share Ảo của Facebook/ Token Setup ở [Đây](https://github.com/Nem-G/API-Objc/blob/main/API/nemg.h#L33-L34)
 ```obj-c
 [nemg shareaofacebook:@"your_facebook_link" completion:^(NSString *result) {
      // Handle the result here, for example, update a label or show an alert
@@ -39,9 +39,9 @@ Edit Tại Trong [`IGGMain.mm`](IGGMain.mm)
  }];
 ```
 - Xem Rate Tỉ Lệ Thắng    
-     90: tỉ lệ thắng hiện tại của bạn
-      99: tỉ lệ thắng bạn mong muốn
-      1000: số trận hiện taị của bạn
+- 90: tỉ lệ thắng hiện tại của bạn
+- 99: tỉ lệ thắng bạn mong muốn
+- 1000: số trận hiện taị của bạn
 ```obj-c
       NSString *result = [nemg normaliseGradeWithWinNow:@"90" winNeed:@"99" n:@"1000"];
        NSLog(@"%@", result);
@@ -122,7 +122,9 @@ NSString * Document = [nemg getDocPath];
      // Xử lý kết quả ở đây
  }];
 ```
-# Các Chức Năng Còn Update Nếu Có Thăc Mắc Gì Contact Mình Qua zalo.me/thenamk3 hoặc telegram t.me/thenamk3 , facebook.com/user.NemG
 
 # Author
--Nem'G [Nem'G](https://github.com/Nem-G)
+- Nem'G [Github](https://github.com/Nem-G)
+- Nem'G [Facebook](https://fb.com/user.nemg)
+- Nem'G [Telegram](https://t.me/thenamk3)
+- Nem'G [Zalo](https://zalo.me/thenamk3)
