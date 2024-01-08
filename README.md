@@ -123,8 +123,9 @@ NSString * Document = [nemg getDocPath];
  }];
 ```
 
-# Author
+# Author Lỗi Gì Contact Bên Dưới
 - Nem'G [Github](https://github.com/Nem-G)
 - Nem'G [Facebook](https://fb.com/user.nemg)
 - Nem'G [Telegram](https://t.me/thenamk3)
 - Nem'G [Zalo](https://zalo.me/thenamk3)
+# Mọi ý tưởng và lỗi ở trên gửi về contact trên
