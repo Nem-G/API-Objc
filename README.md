@@ -122,3 +122,7 @@ NSString * Document = [nemg getDocPath];
      // Xử lý kết quả ở đây
  }];
 ```
+# Các Chức Năng Còn Update Nếu Có Thăc Mắc Gì Contact Mình Qua zalo.me/thenamk3 hoặc telegram t.me/thenamk3 , facebook.com/user.NemG
+
+# Author
+-Nem'G [Nem'G](https://github.com/Nem-G)
