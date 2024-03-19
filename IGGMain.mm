@@ -6,16 +6,8 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIAlertView.h>
 #import <UIKit/UIControl.h>
-#import "API/nemg.h"
-#import "API/SupportFile/NakanoIchika.h"
-#import "API/SupportFile/NakanoNino.h"
-#import "API/SupportFile/NakanoMiku.h"
-#import "API/SupportFile/NakanoYotsuba.h"
-#import "API/SupportFile/NakanoItsuki.h"
-#import "API/SupportFile/dobby.h"
-
-
-   
+#import "API/NemG.h"
+#import "API/Obfuscate.h"
 @interface IGGView()
 @property (nonatomic) UIButton *btnConsole;
 @property (nonatomic, strong) UIImageView *imageView;
@@ -28,10 +20,9 @@ UIView *menuView;
 
 + (void)load
 {
-
-    [nemg loading:^{
-        
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [NemG KeyListen:NSSENCRYPT("nemg")];//apikey của bạn
+    [NemG loading:^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         IGGView *view = [IGGView View];
         [view show];
         [[[[UIApplication sharedApplication] windows]lastObject] addSubview:view];
@@ -160,7 +151,7 @@ CGFloat brightness1 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
     [SW2 addTarget:self action:@selector(feature2:)  forControlEvents:UIControlEventValueChanged];
     [menuView addSubview:SW2];
       UILabel* AL2 = [[UILabel alloc] initWithFrame:CGRectMake(70, 65, 100, 40)];
-      [AL2 setText:@"Anti Blocking"];
+      [AL2 setText:@"Mod SKin"];
       [AL2 setTextColor:[UIColor greenColor] ];
       [AL2 setBackgroundColor:[UIColor clearColor]];
        AL2.font = [UIFont fontWithName:@"AvenirNext-HeavyItalic" size:13];
@@ -179,7 +170,7 @@ CGFloat brightness2 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
     [menuView addSubview:SW3];
    //定义开关默认开启
       UILabel* AL3 = [[UILabel alloc] initWithFrame:CGRectMake(70, 105, 100, 40)];
-      [AL3 setText:@"Show FPS"];
+      [AL3 setText:@"Mod Video Sảnh"];
       [AL3 setTextColor:[UIColor greenColor] ];
       [AL3 setBackgroundColor:[UIColor clearColor]];
        AL3.font = [UIFont fontWithName:@"AvenirNext-HeavyItalic" size:13];
@@ -240,7 +231,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
 
 
 
-        [nemg cleanAllData];
+        [NemG cleanAllData];
 
    
 
@@ -267,7 +258,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
 
         [defaults synchronize];
         
-        [nemg AntiBlocking:YES];
+        [NemG moddata];
 
       
 
@@ -279,7 +270,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
 
         [defaults synchronize];
 
-        [nemg AntiBlocking:NO];
+        [NemG moddata];
 
 
 
@@ -299,7 +290,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
     
     if ([SW3 isOn]) {
 
-        [nemg ShowFPS:YES];
+        [NemG videosanhlqm];
 
    
 

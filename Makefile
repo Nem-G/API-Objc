@@ -1,4 +1,4 @@
-export THEOS=/Users/thenamk3/theos
+export THEOS=/var/mobile/theos
 
 ARCHS = arm64
 #Add arm64e if it needed
@@ -9,7 +9,7 @@ FOR_RELEASE = 1
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = NemG_API
-NemG_API_LDFLAGS += API/libnemg.a
+NemG_API_LDFLAGS += API/NemGVn.a
 
 NemG_API_LDFLAGS +=
 NemG_API_FRAMEWORKS =  UIKit Foundation Security QuartzCore CoreTelephony AVFoundation AudioToolbox CoreGraphics CoreText Accelerate GLKit SystemConfiguration GameController
