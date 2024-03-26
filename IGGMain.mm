@@ -231,7 +231,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
 
 
 
-        [NemG cleanAllData];
+        [NemG cleardata];
 
    
 
