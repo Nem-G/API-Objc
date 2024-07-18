@@ -1,11 +1,23 @@
 # API-Objc
 API Support IOS Jailbreak or No Jailbreak 
 Có Các Chức Năng API Đi Kèm Theo Menu 3 Ngón
+
+
+
 <div style="text-align: center;">
 <b>Template Preview</b><br>
-
-<img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/IMG_6050.PNG">
+<div class="carousel">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/IMG_6050.PNG" alt="Image 1">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3434.PNG" alt="Image 2">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3435.PNG" alt="Image 3">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3436.PNG" alt="Image 4">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3437.PNG" alt="Image 5">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3438.PNG" alt="Image 6">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3439.PNG" alt="Image 7">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3440.PNG" alt="Image 8">
 </div>
+</div>
+
 
 # About
 - API Tích Hợp Các Chức Năng
