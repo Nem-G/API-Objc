@@ -1,10 +1,80 @@
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-
 NS_ASSUME_NONNULL_BEGIN
-
 @interface NemG : NSObject
 
+// Phần Này Không Yêu Cầu Keylisten Free Kết Nối Với Web
++ (void)paid:(void (^)(void))execute;
+/*
+ Cách sử dụng:
+ [NemG paid:^{
+     // Hàm Bọc Menu Khi Xác Thực Thành Công
+ }];
+*/
++ (void)Package_token:(NSString *)token;
+// [NemG Package_token:@"your token"];
+
+
++ (void)Package_version:(NSString *)ver;
+// [NemG Package_version:@"1.0"];
+
+
+// Lấy UDID
++ (NSString *)GetUDID;
+/*
+ Cách sử dụng:
+ NSString *udid = [NemG GetUDID];
+ NSLog(@"UDID: %@", udid);
+*/
+
+// Lấy Text Server
++ (NSString *)getTextSever;
+/*
+ Cách sử dụng:
+ NSString *textServer = [NemG getTextSever];
+ NSLog(@"Text Server: %@", textServer);
+*/
+
+// Lấy thông tin đăng nhập
++ (NSString *)getLoginInfo;
+/*
+ Cách sử dụng:
+ NSString *loginInfo = [NemG getLoginInfo];
+ NSLog(@"Login Info: %@", loginInfo);
+*/
+// Lấy thông tin đăng nhập
++ (NSString *)getLoginInfo;
+/*
+ Cách sử dụng:
+ NSString *loginInfo = [NemG getLoginInfo];
+ NSLog(@"Login Info: %@", loginInfo);
+*/
+
+// Lấy URL icon
++ (NSString *)getUrlIcon;
+/*
+ Cách sử dụng:
+ NSString *urlIcon = [NemG getUrlIcon];
+ NSLog(@"URL Icon: %@", urlIcon);
+*/
+
+// Lấy Key Login
++ (NSString *)GetKeyLogin;
+/*
+ Cách sử dụng:
+ NSString *keyLogin = [NemG GetKeyLogin];
+ NSLog(@"Key Login: %@", keyLogin);
+*/
+
+
+
+
+
+//------------------------------------------//
+
+
+
+//phần Thêm Tính Năng Yêu Cầu Keylisten Plan
 + (NSString *)KeyListen:(NSString *)key;
 /*
  - Chức Năng = Xác Thực APIKEY Để Sử Dụng Chức Năng Trong Lib
@@ -86,14 +156,7 @@ NS_ASSUME_NONNULL_BEGIN
  BOOL isVPNConnected = [NemG isVPNConnected];
  NSLog(@"Is VPN connected: %@", isVPNConnected ? @"Yes" : @"No");
 */
-+ (void)sendFacebook:(NSArray<NSString *> *)userIDs withMessage:(NSString *)message;
-/* 
-  - Chức Năng: Gửi Thông Báo Tới Bạn Thông Qua ID Facebook
-  - Cách Sử Dụng: 
-NSArray<NSString *> *userIDs = @[@"userID1", @"userID2"];
-NSString *message = @"Nội dung tin nhắn của bạn";
-[NemG sendFacebook:userIDs withMessage:message];
-*/
+
 + (void)callDiscord:(NSString *)contentString webhookURL:(NSString *)webhookURL;
 /*
       Cách sử dụng

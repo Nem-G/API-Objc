@@ -20,9 +20,16 @@ UIView *menuView;
 
 + (void)load
 {
-    [NemG KeyListen:NSSENCRYPT("nemg")];//apikey của bạn
-    [NemG loadingg:^{
+    [NemG KeyListen:NSSENCRYPT("NemGVn-year-H4ELU0I1OAZMB76J")];//apikey của bạn
+    [NemG Package_token:NSSENCRYPT("your token")];
+    [NemG Package_version:@"1.0"];
+
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+         [NemG paid:^{
+     // Hàm Bọc Menu Khi Xác Thực Thành Công
+
         IGGView *view = [IGGView View];
         [view show];
         [[[[UIApplication sharedApplication] windows]lastObject] addSubview:view];
@@ -35,9 +42,9 @@ UIView *menuView;
     [Window addGestureRecognizer:tap];
     [tap addTarget:self action:@selector(expand)]; // Check status
 
-   
+ }];//kết thúc hàm paid
         });
-    }];
+   
 }
 
 
@@ -270,8 +277,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
 
         [defaults synchronize];
 
-        [NemG moddata];
-
+       [NemG moddata];
 
 
 
@@ -317,7 +323,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
     [defaults synchronize];
 
 
-
+[NemG videosanhlqm];
 
 
 
@@ -333,7 +339,7 @@ CGFloat brightness4 = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, awa
 
 
 
-
+[NemG videosanhlqm];
 
 
 
