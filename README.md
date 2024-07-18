@@ -5,45 +5,18 @@ Có Các Chức Năng API Đi Kèm Theo Menu 3 Ngón
 
 
 <div style="text-align: center;">
-<b>Template Preview</b><br>
-<div class="carousel">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/IMG_6050.PNG" alt="Image 1">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3434.PNG" alt="Image 2">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3435.PNG" alt="Image 3">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3436.PNG" alt="Image 4">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3437.PNG" alt="Image 5">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3438.PNG" alt="Image 6">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3439.PNG" alt="Image 7">
-    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3440.PNG" alt="Image 8">
+  <b>Template Preview</b><br>
+  <div class="carousel" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/IMG_6050.PNG" alt="Image 1" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3434.PNG" alt="Image 2" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3435.PNG" alt="Image 3" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3436.PNG" alt="Image 4" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3437.PNG" alt="Image 5" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3438.PNG" alt="Image 6" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3439.PNG" alt="Image 7" style="width: 100px; height: auto;">
+    <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3440.PNG" alt="Image 8" style="width: 100px; height: auto;">
+  </div>
 </div>
-</div>
-
-<style>
-    .carousel {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 10px;
-    }
-    .carousel img {
-        flex: 0 0 auto;
-        height: 150px; /* Adjust the height as needed */
-        scroll-snap-align: center;
-        object-fit: cover;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-    }
-    .carousel img:hover {
-        transform: scale(1.05);
-    }
-    .carousel::-webkit-scrollbar {
-        display: none;
-    }
-    .carousel {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-</style>
 
 
 
