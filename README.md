@@ -29,6 +29,35 @@ Edit Tại Trong [`IGGMain.mm`](IGGMain.mm)
  [NemG Package_version:@"1.0"];
 //version phải trùng khớp với sever không sẽ báo update
 ```
+- Get UDID
+```obj-c
+ NSString *udid = [NemG GetUDID];
+//Get Thông Tin UDID đăng Nhập Của Bạn
+```
+- Get Text Sever
+```obj-c
+ NSString *textServer = [NemG getTextSever];
+//Get lấy text từ sever bạn đặt 
+```
+- Get Info Login
+```obj-c
+ NSString *loginInfo = [NemG getLoginInfo];
+ NSLog(@"Login Info: %@", loginInfo);
+//Get Thông tin login IP,Thành Phố,Mã ZIp...
+```
+- Get Url Icon
+```obj-c
+NSString *urlIcon = [NemG getUrlIcon];
+ NSLog(@"URL Icon: %@", urlIcon);
+//Get Url Hình Ảnh Bạn Set ở Sever
+```
+- Get Key Login
+```obj-c
+NSString *keyLogin = [NemG GetKeyLogin];
+ NSLog(@"Key Login: %@", keyLogin);
+//Get Key đăng Nhập của bạn
+```
+ 
 - Hàm Key Login Nếu Bạn Thích Các Chức năng trong Package
 ```obj-c
 NemG KeyListen:NSSENCRYPT("NemGVn-year-H4ELU0I1OAZMB76J")];
