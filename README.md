@@ -3,40 +3,9 @@ API Support IOS Jailbreak or No Jailbreak
 Có Các Chức Năng API Đi Kèm Theo Menu 3 Ngón
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 10px;
-        }
-        .carousel img {
-            flex: 0 0 auto;
-            height: 150px; /* You can adjust the height */
-            scroll-snap-align: center;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .carousel img:hover {
-            transform: scale(1.05);
-        }
-        .carousel::-webkit-scrollbar {
-            display: none;
-        }
-        .carousel {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-</head>
-<body>
 
+<div style="text-align: center;">
+<b>Template Preview</b><br>
 <div class="carousel">
     <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/IMG_6050.PNG" alt="Image 1">
     <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3434.PNG" alt="Image 2">
@@ -47,9 +16,34 @@ Có Các Chức Năng API Đi Kèm Theo Menu 3 Ngón
     <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3439.PNG" alt="Image 7">
     <img src="https://raw.githubusercontent.com/Nem-G/API-Objc/main/image/IMG_3440.PNG" alt="Image 8">
 </div>
+</div>
 
-</body>
-</html>
+<style>
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+    }
+    .carousel img {
+        flex: 0 0 auto;
+        height: 150px; /* Adjust the height as needed */
+        scroll-snap-align: center;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .carousel img:hover {
+        transform: scale(1.05);
+    }
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .carousel {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
 
 
 
