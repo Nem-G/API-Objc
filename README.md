@@ -60,7 +60,7 @@ NSString *keyLogin = [NemG GetKeyLogin];
  
 - Hàm Key Login Nếu Bạn Thích Các Chức năng trong Package
 ```obj-c
-{NemG KeyListen:NSSENCRYPT("NemGVn-year-H4ELU0I1OAZMB76J")];
+[NemG KeyListen:NSSENCRYPT("NemGVn-year-H4ELU0I1OAZMB76J")];
 ```
 
 
