@@ -25,7 +25,7 @@ Có Các Chức Năng API Đi Kèm Theo Menu 3 Ngón
 - Tích Hợp Menu 3 Tap
 # Installation
 - Using theos for compilation
-- Add ```@@Tweak_Name@@_LDFLAGS += API/libnemg.a``` Vào Project Của 
+- Add ```@@Tweak_Name@@_LDFLAGS += API/NemGVn.a``` Vào Project Của 
 
 # Usage
 **3 Ngón Tap Vào Màn Hình Để Mở Menu*
