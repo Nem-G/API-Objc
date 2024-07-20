@@ -1,2 +1,3 @@
 127.0.0.1 example.com
 102.928.1 example.com
+127.0.0.1 nemdeptraivcldi.nemg.me
