@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
      // Hàm Bọc Menu Khi Xác Thực Thành Công
  }];
 */
+//Icon kích hoạt menu GIF Set URL trên sever web
+
 + (void)Package_token:(NSString *)token;
 // [NemG Package_token:@"your token"];
 
@@ -18,7 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)Package_version:(NSString *)ver;
 // [NemG Package_version:@"1.0"];
 
-
+//get ngày hết hạn
++ (NSString *)Getexpired;
+/*
+ Cách sử dụng:
+ NSString *end_time = [NemG Getexpired];
+ NSLog(@"Ngày Hết Hạn: %@", end_time);
+*/
 // Lấy UDID
 + (NSString *)GetUDID;
 /*
