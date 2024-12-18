@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo FPS Theo Y Muốn</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #005bb5;
+        }
+        .hidden {
+            display: none;
+        }
+        .history,
+        .api-docs {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        .history h3,
+        .api-docs h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .history ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.85rem;
+            color: #555;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+            padding: 10px;
+        }
+        .history li {
+            margin-bottom: 5px;
+            padding: 5px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .api-docs pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #444;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Make FPS Online</h1>
+        <p>Nhập nội dung FPS Cần Muốn:</p>
+        <input id="user-text" type="text" placeholder="Nhập text tại đây...">
+        <button id="generate-btn" class="btn">Tạo Link Tải</button>
+        <div id="result" class="hidden">
+            <p id="message"></p>
+            <a id="download-btn" href="#" class="btn hidden">Tải .dylib</a>
+        </div>
+        <div class="history hidden" id="history">
+            <h3>Lịch sử Tạo .dylib:</h3>
+            <ul id="history-list"></ul>
+        </div>
+        <div class="api-docs">
+            <h3>Tài liệu API:</h3>
+            <h4>1. URL:</h4>
+            <p><strong>https://api.nemg.me/fps?text=</strong></p>
+            <h4>2. Dữ liệu trả về:</h4>
+            <p><strong>Thành công:</strong></p>
+            <pre>{
+    "message": "Build thành công.",
+    "download": "https://api.nemg.me/download/NemG.dylib"
+}</pre>
+            <p><strong>Thất bại:</strong></p>
+            <pre>{
+    "error": "Vui lòng điền tên FPS: ví dụ NemG"
+}</pre>
+        </div>
+    </div>
+
+    <script>
+        const apiBaseUrl = "https://api.nemg.me/fps?text=";
+        const historyApiUrl = "https://api.nemg.me/history"; 
+        const userText = document.getElementById("user-text");
+        const generateBtn = document.getElementById("generate-btn");
+        const resultDiv = document.getElementById("result");
+        const messageElement = document.getElementById("message");
+        const downloadBtn = document.getElementById("download-btn");
+        const historyDiv = document.getElementById("history");
+        const historyList = document.getElementById("history-list");
+        function fetchHistory() {
+            fetch(historyApiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    historyList.innerHTML = ""; // Xóa nội dung cũ
+                    if (data.history && data.history.length > 0) {
+                        data.history.forEach(item => {
+                            const li = document.createElement("li");
+                            li.textContent = item;
+                            historyList.appendChild(li);
+                        });
+                        historyDiv.classList.remove("hidden");
+                    } else {
+                        historyList.innerHTML = "<li>Chưa có lịch sử.</li>";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching history:", error);
+                    historyList.innerHTML = "<li>Không thể tải lịch sử.</li>";
+                });
+        }
+        generateBtn.addEventListener("click", () => {
+            const text = userText.value.trim();
+            if (!text) {
+                alert("Vui lòng nhập nội dung!");
+                return;
+            }
+            const apiUrl = `${apiBaseUrl}${encodeURIComponent(text)}`;
+            messageElement.textContent = "Đang tạo link, vui lòng chờ...";
+            resultDiv.classList.remove("hidden");
+            downloadBtn.classList.add("hidden"); 
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === "Build thành công." && data.download) {
+                        messageElement.textContent = data.message;
+                        downloadBtn.href = data.download;
+                        downloadBtn.classList.remove("hidden");
+                        fetchHistory();
+                    } else if (data.error) {
+                        messageElement.textContent = data.error;
+                    } else {
+                        messageElement.textContent = "Có lỗi xảy ra, vui lòng thử lại.";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    messageElement.textContent = "Không thể kết nối đến API.";
+                });
+        });
+        document.addEventListener("DOMContentLoaded", fetchHistory);
+    </script>
+</body>
+</html>
